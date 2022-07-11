@@ -5,7 +5,7 @@ import styles from './header.module.scss';
 export default function Header() {
     return (
         <div className={styles.wrapper}>
-            <div className={styles.header}>
+            <header className={styles.header}>
                 <Image src="/images/lagoinha-white.png" alt="logo" width='200px' height='100px' objectFit='contain' />
                 <ul className={styles.links}>
                     <li>Início</li>
@@ -17,7 +17,7 @@ export default function Header() {
                     <button className={`${styles.btn} ${styles['btn-transparent']}`}>Fale com a gente</button>
                     <button className={`${styles.btn} ${styles['btn-primary']}`}>Contribua</button>
                 </div>
-            </div>
+            </header>
         </div>
     )
 }
