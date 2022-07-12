@@ -18,16 +18,16 @@ export default function Header() {
                 </ul>
                 <div className={styles.extra}>
                     <div className={styles.contact}>
-                        <a href="https://wa.me/5516994057448/" target='_blank'>
+                        <a href="https://wa.me/5516994057448/" target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faWhatsapp} />
                         </a>
-                        <a href="https://www.instagram.com/lagoinharibeiraopreto/" target='_blank'>
+                        <a href="https://www.instagram.com/lagoinharibeiraopreto/" target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
-                        <a href="https://www.facebook.com/LagoinhaRibeiraoPreto/" target='_blank'>
+                        <a href="https://www.facebook.com/LagoinhaRibeiraoPreto/" target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faFacebook} />
                         </a>
-                        <a href="https://www.youtube.com/c/IgrejaBatistaLagoinhaRibeir%C3%A3oPretoSP" target='_blank'>
+                        <a href="https://www.youtube.com/c/IgrejaBatistaLagoinhaRibeir%C3%A3oPretoSP" target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faYoutube} />
                         </a>
                     </div>
