@@ -3,24 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import CoverSection from '../components/home/cover-section/cover-section.jsx';
+import Subtitle from '../components/subtitle/subtitle.jsx';
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
     <main className={styles.container}>
-      <section className={styles.cover}>
-
-
-      </section>
+      <CoverSection />
 
       <section className={styles.info}>
-        <div className={styles.text}>
-          <h2 className={styles.subtitle}>
-            <FontAwesomeIcon icon={faPlaceOfWorship} className={styles.icon} />
-            Um lugar de novos começos</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestiae saepe alias laboriosam nobis, voluptas, aliquam temporibus beatae laudantium excepturi odio commodi eligendi quasi suscipit quidem? Soluta odio, et autem sint fugiat rerum quo eligendi voluptatibus sed provident rem accusamus. Enim mollitia earum deleniti omnis consequatur voluptatibus sit exercitationem sapiente.</p>
+        <div className={styles.description}>
+          <Subtitle icon={faPlaceOfWorship}>Um lugar de novos começos</Subtitle>
+          <p>A Igreja Batista da Lagoinha nasceu em Belo Horizonte - MG e há mais de 6 décadas atua de forma relevante na expansão do evangelho. Atualmente, como Lagoinha Global, inúmeras igrejas crescem em diferentes lugares do Brasil e mundo afora.
+            Em Ribeirão Preto - SP, a Igreja Batista da Lagoinha nasceu há 4 anos e deseja que cada pessoa tenha um relacionamento público com Jesus.
+            São mais de 600 Lagoinhas que atuam com uma única visão: alcançar a população para Cristo.</p>
         </div>
-
         <div className={styles.agenda}>
           <h2 className={styles.subtitle}>
             <FontAwesomeIcon icon={faClock} className={styles.icon} />
@@ -63,7 +61,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section2}>
+      <section className={styles.section2} id='pedido-de-oracao'>
         <div className={styles.wrapper}>
           <div className={styles.contribution}>
             <div className={styles.pray}>
@@ -102,7 +100,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.maps}>
+      <section id='nossa-localizacao' className={styles.maps}>
         <div className={styles.address}>
           <h2 className={styles.subtitle}>
             <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />

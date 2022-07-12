@@ -1,10 +1,12 @@
 import '../styles/globals.scss'
-import Header from '../components/header/header.tsx';
+import Header from '../components/header/header.jsx';
 
 function MyApp({ Component, pageProps }) {
   return <>
     <Header></Header>
-    <Component {...pageProps} />
+    <div id='inicio' className='layout'>
+      <Component {...pageProps} />
+    </div>
   </>
 }
 

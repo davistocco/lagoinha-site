@@ -4,23 +4,29 @@
     max-width: 1200px;
     padding: 45px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    .text {
+    .description {
       width: 50%;
 
-      h1 {
-        text-transform: uppercase;
+      p {
+        line-height: 2;
       }
     }
   }
 
-  .cover {
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 45px;
-    height: 400px;
-    background-color: #fff;
+  .section1 {
+    .cover {
+      display: flex;
+
+      .description {
+        width: 50%;
+
+        h1 {
+          text-transform: uppercase;
+        }
+      }
+    }
   }
 
   .section2 {

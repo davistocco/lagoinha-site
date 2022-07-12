@@ -8,6 +8,7 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: #fff;
   background: #000;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -36,4 +37,9 @@ li {
   background: #000;
   color: #fff;
   border-radius: 2px;
+}
+
+.layout {
+  position: relative;
+  top: 100px;
 }

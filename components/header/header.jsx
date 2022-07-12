@@ -8,9 +8,9 @@ export default function Header() {
             <header className={styles.header}>
                 <Image src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
                 <ul className={styles.links}>
-                    <li>Início</li>
-                    <li>Pedido de oração</li>
-                    <li>Nossa localização</li>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#pedido-de-oracao">Pedido de oração</a></li>
+                    <li><a href="#nossa-localizacao">Nossa localização</a></li>
                     <li>Encontre um gc</li>
                 </ul>
                 <div className={styles.extra}>
