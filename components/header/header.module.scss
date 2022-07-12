@@ -1,5 +1,5 @@
 .wrapper {
-    background: #000;
+    background: #FDD200;
 
     .header {
         max-width: 1200px;
@@ -10,7 +10,7 @@
 
         .links {
             display: flex;
-            color: #fff;
+            color: #000;
             text-transform: uppercase;
             font-size: 12px;
 
@@ -21,8 +21,8 @@
             }
 
             li:hover {
-                color: #000;
-                box-shadow: inset 200px 0 0 0 #FDD200;
+                color: #fff;
+                box-shadow: inset 200px 0 0 0 #000;
             }
         }
 
@@ -40,11 +40,13 @@
 
             .btn-transparent {
                 background: transparent;
-                color: #fff;
+                color: #000;
             }
 
             .btn-primary {
-                background: #FDD200;
+                background: #000;
+                color: #fff;
+                border-radius: 2px;
             }
         }
     }

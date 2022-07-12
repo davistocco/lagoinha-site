@@ -1,12 +1,91 @@
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  .info {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+
+    .text {
+      width: 50%;
+
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+  }
 
   .cover {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 45px;
+    height: 400px;
+    background-color: #fff;
+  }
 
-    h2 {
-      font-style: italic;
-      font-size: 16px;
+  .section2 {
+    padding: 45px;
+    background-color: #f5f5f5;
+
+    .contribution {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .carousel {
+        width: 50%;
+        border-radius: 2px;
+        background-color: #000;
+      }
+
+      .pray {
+        width: 50%;
+        padding-right: 45px;
+
+        button {
+          background: #FDD200;
+          color: #000;
+        }
+      }
+    }
+  }
+
+
+  .maps {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 45px 0;
+
+    .address {
+      text-align: center;
+      margin-right: 45px;
+
+      h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 24px;
+        padding-bottom: 10px;
+        display: inline-block;
+
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        border-bottom: 5px solid #FDD200;
+      }
+
+      p {
+        white-space: nowrap;
+        text-align: left;
+        font-size: 24px;
+      }
     }
   }
 
@@ -34,9 +113,7 @@
 
         .day-of-week {
           font-weight: bold;
-          background: #FDD200;
           width: fit-content;
-          padding: 0 2px;
         }
 
         .event {
@@ -56,4 +133,93 @@
       }
     }
   }
+}
+
+.subtitle {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding-bottom: 10px;
+  display: inline-block;
+  white-space: nowrap;
+
+}
+
+.subtitle.secondary {
+  color: #000;
+}
+
+.subtitle.secondary::after {
+  content: "";
+  border-bottom: 5px solid #000;
+}
+
+.subtitle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  border-bottom: 5px solid #FDD200;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-item {
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  &,
+  input {
+    font-size: 16px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    background-color: #fff;
+    border: 1px solid #bdbdbd;
+  }
+
+  textarea {
+    resize: none;
+    width: 100%;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #bdbdbd;
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
 }

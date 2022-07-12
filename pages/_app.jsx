@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Header from '../components/header/header.tsx';
 
 function MyApp({ Component, pageProps }) {

@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>
-                <Image src="/images/lagoinha-white.png" alt="logo" width='200px' height='100px' objectFit='contain' />
+                <Image src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
                 <ul className={styles.links}>
                     <li>Início</li>
                     <li>Pedido de oração</li>

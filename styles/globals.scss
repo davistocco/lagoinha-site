@@ -18,7 +18,6 @@ a {
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
 }
 
 button {
@@ -26,8 +25,15 @@ button {
   border: none;
 }
 
-ul, li {
+ul,
+li {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+  border-radius: 2px;
 }
