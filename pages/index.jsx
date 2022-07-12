@@ -31,11 +31,11 @@ export default function Home() {
             <div className={styles.detail}>
               <div className={styles['day-of-week']}>Domingo</div>
               <div className={styles.event}>
-                <div className={styles.time}>09h</div>
+                <div className={styles.time}>09h30</div>
                 <div className={styles.name}>Culto de Celebração</div>
               </div>
               <div className={styles.event}>
-                <div className={styles.time}>19h</div>
+                <div className={styles.time}>19h00</div>
                 <div className={styles.name}>Culto de Celebração</div>
               </div>
             </div>
@@ -45,7 +45,7 @@ export default function Home() {
             <div className={styles.detail}>
               <div className={styles['day-of-week']}>Sábado</div>
               <div className={styles.event}>
-                <div className={styles.time}>20h</div>
+                <div className={styles.time}>20h00</div>
                 <div className={styles.name}>Culto Legacy Jovens</div>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Home() {
             <div className={styles.detail}>
               <div className={styles['day-of-week']}>Quinta-Feira</div>
               <div className={styles.event}>
-                <div className={styles.time}>20h</div>
+                <div className={styles.time}>20h00</div>
                 <div className={styles.name}>Culto Fé</div>
               </div>
             </div>
