@@ -4,7 +4,7 @@ import Header from '../components/header/header.jsx';
 function MyApp({ Component, pageProps }) {
   return <>
     <Header></Header>
-    <div id='inicio' className='layout'>
+    <div className='layout'>
       <Component {...pageProps} />
     </div>
   </>

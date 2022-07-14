@@ -1,0 +1,49 @@
+.section {
+    background-color: #FDD200;
+    color: #000;
+
+    .app {
+        width: 1200px;
+        max-width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 45px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .description {
+            width: 50%;
+
+            ul {
+                li {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 16px;
+
+                    .icon-wrapper {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+
+        .mobile {
+            position: relative;
+            width: 400px;
+            height: 600px;
+        }
+
+        .badges {
+            display: flex;
+            padding-top: 28px;
+
+            div {
+                position: relative;
+                height: 75px;
+                width: 200px;
+                margin-right: 16px;
+            }
+        }
+    }
+}

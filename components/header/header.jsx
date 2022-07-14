@@ -14,7 +14,7 @@ export default function Header() {
                     <li><a href="#pedido-de-oracao">Pedido de oração</a></li>
                     <li><a href="#nossa-localizacao">Nossa localização</a></li>
                     <li><a href="">Encontre um GC</a></li>
-                    <li><a href="">Nosso APP</a></li>
+                    <li><a href="#nosso-app">Nosso APP</a></li>
                 </ul>
                 <div className={styles.extra}>
                     <div className={styles.contact}>

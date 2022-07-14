@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CoverSection from '../components/home/cover-section/cover-section.jsx';
 import Subtitle from '../components/subtitle/subtitle.jsx';
+import AppSection from '../components/app-section/app-section.jsx';
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -113,6 +114,8 @@ export default function Home() {
           width="100%" height="450" allowFullScreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </section>
+
+      <AppSection></AppSection>
 
     </main>
   )
