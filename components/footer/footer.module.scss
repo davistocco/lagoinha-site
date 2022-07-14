@@ -1,0 +1,16 @@
+.footer {
+    text-align: center;
+    padding: 45px;
+    background: #383838;
+
+    .wrapper {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+        }
+    }
+}

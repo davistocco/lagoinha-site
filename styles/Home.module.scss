@@ -1,7 +1,7 @@
 .container {
   .info {
     margin: 0 auto;
-    max-width: 1200px;
+    width: 1200px;
     padding: 45px 0;
     display: flex;
     justify-content: space-between;
@@ -60,7 +60,7 @@
   .maps {
     display: flex;
     align-items: center;
-    max-width: 1200px;
+    width: 1200px;
     margin: auto;
     padding: 45px 0;
 
@@ -172,7 +172,7 @@
 }
 
 .wrapper {
-  max-width: 1200px;
+  width: 1200px;
   margin: auto;
 }
 
