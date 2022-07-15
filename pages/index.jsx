@@ -8,9 +8,11 @@ import Subtitle from '../components/subtitle/subtitle.jsx';
 import AppSection from '../components/home/app-section/app-section.jsx';
 import Contribute from '../components/home/contribute/contribute.jsx';
 import styles from '../styles/Home.module.scss'
-import Head from 'next/head.js';
+import { getPhotos } from '../domains/photos.js';
 
-export default function Home() {
+export default function Home(props) {
+  const photos = props.photos;
+
   return (
     <main className={styles.container}>
       <CoverSection />
@@ -91,13 +93,16 @@ export default function Home() {
                 <button className={`${styles.btn} ${styles['btn-primary']}`}>Enviar</button>
               </form>
             </div>
-            <Carousel showArrows={false} showStatus={false} className={styles.carousel} showThumbs={false}>
-              <div style={{ height: 300, width: 50 }}>
-              </div>
-              <div style={{ height: 300, width: 50 }}>
-              </div>
-              <div style={{ height: 300, width: 50 }}>
-              </div>
+            <Carousel showArrows={true} showStatus={false} autoPlay={true}
+              interval={4000} className={styles.carousel} showThumbs={false}
+              infiniteLoop={true}>
+              {
+                photos.map(photo =>
+                  <div className={styles.item}>
+                    <Image src={photo.url} alt="logo" layout='fill' objectFit='contain' />
+                  </div>
+                )
+              }
             </Carousel>
           </div>
         </div>
@@ -111,7 +116,6 @@ export default function Home() {
             <FontAwesomeIcon icon={faLocationDot} className={styles.icon} />
             Nossa Localização
           </h2>
-          <Image src="/images/igreja-batista.png" alt="logo" width='200px' height='200px' objectFit='contain' />
           <p>Av. Nove de Julho, 2241 - Vila Seixas<br />Ribeirão Preto - SP</p>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d686.7178121283068!2d-47.798905038997816!3d-21.19352141448668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bff5311d66ff%3A0x5e43e3deccd30dd4!2sIgreja%20Batista%20da%20Lagoinha%20em%20Ribeir%C3%A3o%20Preto!5e0!3m2!1sen!2sbr!4v1657569471673!5m2!1sen!2sbr"
@@ -123,4 +127,14 @@ export default function Home() {
 
     </main>
   )
+}
+
+export async function getServerSideProps() {
+  const photos = await getPhotos();
+
+  return {
+    props: {
+      photos: photos
+    }
+  }
 }

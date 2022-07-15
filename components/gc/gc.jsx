@@ -20,8 +20,8 @@ export default function Gc(props) {
                     <thead>
                         <tr>
                             <th>Nome do GC</th>
-                            <th>Bairro</th>
                             <th>Endereço</th>
+                            <th>Bairro</th>
                             <th>Data</th>
                             <th>Líderes</th>
                         </tr>
@@ -31,8 +31,8 @@ export default function Gc(props) {
                             gcs.map(gc =>
                                 <tr key={gc.id}>
                                     <td>{gc.attributes.name}</td>
-                                    <td>{gc.attributes.district}</td>
                                     <td>{gc.attributes.street}, {gc.attributes.number}</td>
+                                    <td>{gc.attributes.district}</td>
                                     <td>{gc.attributes.day_of_week} às {gc.attributes.starts_at}</td>
                                     <td>{gc.attributes.leadership}</td>
                                 </tr>

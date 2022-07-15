@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const config = {
-    url: process.env.NEXT_PUBLIC_STRAPI_URL,
+    url: process.env.NEXT_PUBLIC_STRAPI_URL + '/api',
     token: process.env.NEXT_PUBLIC_STRAPI_TOKEN
 }
 
