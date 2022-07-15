@@ -15,8 +15,8 @@ export default function Header() {
                 <ul className={styles.links}>
                     <li><Link href="/#">Início</Link></li>
                     <li><Link href="/#pedido-de-oracao">Pedido de oração</Link></li>
-                    <li><a href="/#nossa-localizacao">Nossa localização</a></li>
-                    <li><a href="/#nosso-app">Nosso APP</a></li>
+                    <li><Link href="/#nossa-localizacao">Nossa localização</Link></li>
+                    <li><Link href="/#nosso-app">Nosso APP</Link></li>
                     <li><Link href='/encontre-um-gc'>Encontre um GC</Link></li>
                 </ul>
                 <div className={styles.extra}>
