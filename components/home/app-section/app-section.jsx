@@ -2,7 +2,7 @@ import { faBookBible, faCalendarCheck, faHandHoldingHeart, faMobileScreen, faSta
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import React from 'react'
-import Subtitle from '../subtitle/subtitle';
+import Subtitle from '../../subtitle/subtitle';
 import styles from './app-section.module.scss';
 
 export default function AppSection() {

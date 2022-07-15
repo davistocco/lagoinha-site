@@ -1,11 +1,13 @@
 import '../styles/globals.scss'
 import Header from '../components/header/header.jsx';
+import Footer from '../components/footer/footer.jsx';
 
 function MyApp({ Component, pageProps }) {
   return <>
-    <Header></Header>
     <div className='layout'>
+      <Header></Header>
       <Component {...pageProps} />
+      <Footer />
     </div>
   </>
 }

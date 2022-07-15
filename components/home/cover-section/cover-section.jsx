@@ -9,9 +9,7 @@ export default function CoverSection() {
         <section id='inicio' className={styles.section}>
             <div className={styles.cover}>
                 <Subtitle>Nossa Igreja</Subtitle>
-                <div className={styles.image}>
-                    <Image src="/images/Artboard 2.png" alt="logo" layout='fill' objectFit='cover' />
-                </div>
+                <Image src="/images/Artboard 2.png" alt="logo" width='1200' height='480' objectFit='contain' />
             </div>
         </section>
     )

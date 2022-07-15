@@ -5,9 +5,9 @@ import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CoverSection from '../components/home/cover-section/cover-section.jsx';
 import Subtitle from '../components/subtitle/subtitle.jsx';
-import AppSection from '../components/app-section/app-section.jsx';
+import AppSection from '../components/home/app-section/app-section.jsx';
 import Footer from '../components/footer/footer.jsx';
-import Contribute from '../components/contribute/contribute.jsx';
+import Contribute from '../components/home/contribute/contribute.jsx';
 import styles from '../styles/Home.module.scss'
 
 export default function Home() {
@@ -120,8 +120,6 @@ export default function Home() {
       </section>
 
       <AppSection></AppSection>
-
-      <Footer></Footer>
 
     </main>
   )

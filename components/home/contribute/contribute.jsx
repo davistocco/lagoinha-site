@@ -1,6 +1,6 @@
 import { faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
-import Subtitle from '../subtitle/subtitle'
+import Subtitle from '../../subtitle/subtitle'
 import styles from './contribute.module.scss';
 import Image from 'next/image';
 

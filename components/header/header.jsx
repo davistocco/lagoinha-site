@@ -3,18 +3,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import React from 'react'
 import styles from './header.module.scss';
+import Link from 'next/link'
 
 export default function Header() {
     return (
         <div className={styles.wrapper}>
             <header className={styles.header}>
-                <Image src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
+                <Link href='/'>
+                    <Image className={styles.logo} src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
+                </Link>
                 <ul className={styles.links}>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#pedido-de-oracao">Pedido de oração</a></li>
-                    <li><a href="#nossa-localizacao">Nossa localização</a></li>
-                    <li><a href="">Encontre um GC</a></li>
-                    <li><a href="#nosso-app">Nosso APP</a></li>
+                    <li><Link href="/#">Início</Link></li>
+                    <li><Link href="/#pedido-de-oracao">Pedido de oração</Link></li>
+                    <li><a href="/#nossa-localizacao">Nossa localização</a></li>
+                    <li><a href="/#nosso-app">Nosso APP</a></li>
+                    <li><Link href='/encontre-um-gc'>Encontre um GC</Link></li>
                 </ul>
                 <div className={styles.extra}>
                     <div className={styles.contact}>
