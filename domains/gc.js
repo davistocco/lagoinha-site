@@ -1,7 +1,7 @@
 import strapi from "../services/strapi"
 
 const getGcs = () => new Promise((resolve, reject) => {
-    strapi.get('/gcs?populate=address')
+    strapi.get('/gcs')
         .then(response => {
             resolve(response.data);
         })
