@@ -97,8 +97,8 @@ export default function Home(props) {
               interval={4000} className={styles.carousel} showThumbs={false}
               infiniteLoop={true}>
               {
-                photos.map(photo =>
-                  <div className={styles.item}>
+                photos.map((photo, index) =>
+                  <div key={index} className={styles.item}>
                     <Image src={photo.url} alt="logo" layout='fill' objectFit='contain' />
                   </div>
                 )
