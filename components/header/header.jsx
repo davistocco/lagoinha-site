@@ -34,7 +34,7 @@ export default function Header() {
                             <FontAwesomeIcon icon={faYoutube} />
                         </a>
                     </div>
-                    <button className={`${styles.btn} ${styles['btn-primary']}`}> <a href="#contribua">Contribua</a> </button>
+                    <button className={`${styles.btn} ${styles['btn-primary']}`}> <Link href="/#contribua">Contribua</Link> </button>
                 </div>
             </header>
         </div>

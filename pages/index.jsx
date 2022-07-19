@@ -9,9 +9,25 @@ import AppSection from '../components/home/app-section/app-section.jsx';
 import Contribute from '../components/home/contribute/contribute.jsx';
 import styles from '../styles/Home.module.scss'
 import { getPhotos } from '../domains/photos.js';
+import axios from 'axios';
 
 export default function Home(props) {
   const photos = props.photos;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    axios.post('/api/pray-request', {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      phone: event.target.phone.value,
+      description: event.target.description.value,
+    }).then(response => {
+      console.log(response);
+    }).catch(error => {
+      console.log(error);
+    });
+  }
 
   return (
     <main className={styles.container}>
@@ -73,24 +89,24 @@ export default function Home(props) {
               <h2 className={`${styles.subtitle} ${styles.secondary}`}>
                 <FontAwesomeIcon icon={faPrayingHands} className={styles.icon} />
                 Pedido de Oração</h2>
-              <form action="">
+              <form onSubmit={handleSubmit}>
                 <div className={styles['form-item']}>
-                  <label htmlFor="">Nome</label>
-                  <input type="text" id='name' />
+                  <label htmlFor="name">Nome</label>
+                  <input type="text" id='name' name='name' />
                 </div>
                 <div className={styles['form-item']}>
-                  <label htmlFor="">E-mail</label>
-                  <input type="text" id='name' />
+                  <label htmlFor="email">E-mail</label>
+                  <input type="text" id='email' name='email' />
                 </div>
                 <div className={styles['form-item']}>
-                  <label htmlFor="">Telefone</label>
-                  <input type="text" id='name' />
+                  <label htmlFor="phone">Telefone</label>
+                  <input type="text" id='phone' name='phone' />
                 </div>
                 <div className={styles['form-item']}>
-                  <label htmlFor="">Descrição do pedido</label>
-                  <textarea name="pray-request" id="" rows="5" ></textarea>
+                  <label htmlFor="description">Descrição do pedido</label>
+                  <textarea name="description" id="description" rows="5" ></textarea>
                 </div>
-                <button className={`${styles.btn} ${styles['btn-primary']}`}>Enviar</button>
+                <button type='submit' className={`${styles.btn} ${styles['btn-primary']}`}>Enviar</button>
               </form>
             </div>
             <Carousel showArrows={true} showStatus={false} autoPlay={true}
