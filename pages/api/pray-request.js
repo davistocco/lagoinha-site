@@ -26,14 +26,13 @@ const sendPrayRequest = async (req, res) => {
 
     const options = {
         from: 'Pedido de Oração <sender@sender.com>',
-        to: process.env.EMAIL_TO,
+        to: process.env.NEXT_PUBLIC_EMAIL_TO,
         subject: `Pedido de Oração - ${name}`,
         html: message,
     }
 
     transporter.sendMail(options, (error, info) => {
         if (error) {
-            console.error(error);
             res.status(400).send();
         } else {
             res.status(200).send();
