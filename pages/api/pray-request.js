@@ -9,10 +9,10 @@ const sendPrayRequest = async (req, res) => {
     } = req.body;
 
     const transporter = nodemailer.createTransport({
-        service: process.env.EMAIL_SERVICE,
+        service: process.env.NEXT_PUBLIC_EMAIL_SERVICE,
         auth: {
-            user: process.env.EMAIL_SENDER,
-            pass: process.env.EMAIL_PASSWORD
+            user: process.env.NEXT_PUBLIC_EMAIL_SENDER,
+            pass: process.env.NEXT_PUBLIC_EMAIL_PASSWORD
         }
     })
 
