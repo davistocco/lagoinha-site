@@ -2,6 +2,7 @@ import '../styles/globals.scss'
 import Header from '../components/header/header.jsx';
 import Footer from '../components/footer/footer.jsx';
 import Head from 'next/head';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }) {
   return <>

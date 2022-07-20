@@ -1,4 +1,4 @@
-import { faClock, faLocationDot, faPlaceOfWorship, faPrayingHands } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faLocationDot, faPlaceOfWorship, faPrayingHands, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image'
 import { Carousel } from 'react-responsive-carousel'
@@ -7,30 +7,54 @@ import CoverSection from '../components/home/cover-section/cover-section.jsx';
 import Subtitle from '../components/subtitle/subtitle.jsx';
 import AppSection from '../components/home/app-section/app-section.jsx';
 import Contribute from '../components/home/contribute/contribute.jsx';
+import Button from '../components/button/button.jsx';
 import styles from '../styles/Home.module.scss'
 import { getPhotos } from '../domains/photos.js';
 import axios from 'axios';
+import { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
 
 export default function Home(props) {
   const photos = props.photos;
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-
+    setLoading(true);
     axios.post('/api/pray-request', {
       name: event.target.name.value,
       email: event.target.email.value,
       phone: event.target.phone.value,
       description: event.target.description.value,
     }).then(response => {
-      console.log(response);
+      toast.success('Pedido de oração enviado!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }).catch(error => {
-      console.log(error);
+      toast.error('Erro ao enviar pedido de oração', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    }).finally(() => {
+      setLoading(false);
     });
   }
 
   return (
     <main className={styles.container}>
+      <ToastContainer />
       <CoverSection />
 
       <section className={styles.info}>
@@ -106,7 +130,7 @@ export default function Home(props) {
                   <label htmlFor="description">Descrição do pedido</label>
                   <textarea name="description" id="description" rows="5" ></textarea>
                 </div>
-                <button type='submit' className={`${styles.btn} ${styles['btn-primary']}`}>Enviar</button>
+                <Button loading={loading}>Enviar</Button>
               </form>
             </div>
             <Carousel showArrows={true} showStatus={false} autoPlay={true}
