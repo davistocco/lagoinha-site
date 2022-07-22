@@ -4,10 +4,9 @@
     top: 0;
     z-index: 9999;
     background: #FDD200;
-    box-shadow: 2px 2px 8px #424242;
     transition: top 0.3s;
     display: block;
-
+    
     .header {
         width: 1200px;
         max-width: 90%;
@@ -15,7 +14,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         .logo {
             cursor: pointer;
         }
@@ -74,4 +72,99 @@
             }
         }
     }
+
+    @media screen and (max-width: 1080px){
+        & {
+            display: none;
+        }
+    }
+}
+
+.mobile {
+    height: 100vh;
+    position: fixed;
+    background: #FDD200;
+    z-index: 9999;
+    top: 0;
+    padding: 0 45px 45px 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    justify-content: space-between;
+    left: -290px;
+    transition: left 0.3s;
+
+    .logo {
+        cursor: pointer;
+    }
+
+    .hamburger {
+        position: absolute;
+        color: #000;
+        cursor: pointer;
+        top: 22px;
+        right: -46px;
+        background: #FDD200;
+        padding: 10px;
+        border-radius: 2px;
+    }
+
+    .links {
+        color: #000;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        li {
+            margin-bottom: 10px;
+            margin-left: -5px;
+            cursor: pointer;
+
+            a {
+                transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+                padding: 5px 10px;
+            }
+
+            a:hover {
+                color: #fff;
+                box-shadow: inset 200px 0 0 0 #000;
+            }
+        }
+
+    }
+
+    .extra {
+        display: flex;
+        flex-direction: column;
+
+        .btn {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn-transparent {
+            background: transparent;
+            color: #000;
+        }
+
+        .btn-primary {
+            background: #000;
+            color: #fff;
+            border-radius: 2px;
+        }
+
+        .contact {
+            padding: 8px 0;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            font-size: 24px;
+        }
+    }
+}
+
+.show {
+    left: 0;
 }
