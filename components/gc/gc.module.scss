@@ -3,11 +3,20 @@
     color: #000;
     height: 100%;
     padding: 45px 0;
+    padding-top: 145px;
 
     .wrapper {
         width: 1200px;
         max-width: 90%;
         margin: auto;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    .table-container {
+        overflow: auto;
     }
 
     .table {
@@ -27,13 +36,20 @@
             color: #fff;
             text-transform: uppercase;
 
-            th {}
+            th {
+            }
         }
 
         tbody {
             tr:nth-child(even) {
                 background-color: #eee;
             }
+        }
+    }
+
+    @media screen and (max-width: 1079px) {
+        & {
+            padding-top: 95px;
         }
     }
 }

@@ -16,30 +16,32 @@ export default function Gc(props) {
 
                 <Subtitle icon={faHouseChimney} secondary>Encontre um GC</Subtitle>
 
-                <table className={styles.table}>
-                    <thead>
-                        <tr>
-                            <th>Nome do GC</th>
-                            <th>Endereço</th>
-                            <th>Bairro</th>
-                            <th>Data</th>
-                            <th>Líderes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            gcs.map(gc =>
-                                <tr key={gc.id}>
-                                    <td>{gc.attributes.name}</td>
-                                    <td>{gc.attributes.street}, {gc.attributes.number}</td>
-                                    <td>{gc.attributes.district}</td>
-                                    <td>{gc.attributes.day_of_week} às {gc.attributes.starts_at}</td>
-                                    <td>{gc.attributes.leadership}</td>
-                                </tr>
-                            )
-                        }
-                    </tbody>
-                </table>
+                <div className={styles['table-container']}>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Nome do GC</th>
+                                <th>Endereço</th>
+                                <th>Bairro</th>
+                                <th>Data</th>
+                                <th>Líderes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                gcs.map(gc =>
+                                    <tr key={gc.id}>
+                                        <td>{gc.attributes.name}</td>
+                                        <td>{gc.attributes.street}, {gc.attributes.number}</td>
+                                        <td>{gc.attributes.district}</td>
+                                        <td>{gc.attributes.day_of_week} às {gc.attributes.starts_at}</td>
+                                        <td>{gc.attributes.leadership}</td>
+                                    </tr>
+                                )
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     )

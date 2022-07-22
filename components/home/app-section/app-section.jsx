@@ -10,7 +10,7 @@ export default function AppSection() {
         <section id='nosso-app' className={styles.section}>
             <div className={styles.app}>
                 <div className={styles.mobile}>
-                    <Image src="/images/iphone.png" alt="logo" layout='fill' objectFit='cover' />
+                    <Image src="/images/iphone.png" alt="logo" width={400} height={600} objectFit='cover' />
 
                 </div>
                 <div className={styles.description}>

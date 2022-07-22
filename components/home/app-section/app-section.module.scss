@@ -1,5 +1,5 @@
 .section {
-    background-color: #FDD200;
+    background-color: #fdd200;
     color: #000;
 
     .app {
@@ -11,6 +11,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap-reverse;
 
         .description {
             width: 50%;
@@ -42,7 +43,26 @@
                 position: relative;
                 height: 75px;
                 width: 200px;
+            }
+
+            div:first-child {
                 margin-right: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .section {
+        .app {
+            justify-content: center;
+
+            .description {
+                width: 100%;
+            }
+
+            .badges {
+                justify-content: center;
             }
         }
     }

@@ -1,10 +1,16 @@
 .section {
     background-color: #000000;
+    padding-top: 145px;
 
     .cover {
         width: 1200px;
         max-width: 90%;
         margin: auto;
-        padding-top: 45px;
+    }
+
+    @media screen and (max-width: 1079px) {
+        & {
+            padding-top: 95px;
+        }
     }
 }

@@ -1,71 +1,73 @@
 .info {
-    margin: 0 auto;
-    width: 1200px;
-    max-width: 90%;
-    padding: 45px 0;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  margin: 0 auto;
+  width: 1200px;
+  max-width: 90%;
+  padding: 45px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    .description {
-      width: 50%;
+  .description {
+    width: 50%;
 
-      p {
-        line-height: 2;
-      }
+    p {
+      line-height: 2;
+      text-align: justify;
+    }
+  }
+
+  .agenda {
+    text-transform: uppercase;
+    display: inline-block;
+
+    .title {
+      text-align: center;
+      padding: 8px 16px;
+      font-weight: bold;
     }
 
-    .agenda {
-        text-transform: uppercase;
-        display: inline-block;
-    
-        .title {
-          text-align: center;
-          padding: 8px 16px;
+    .card {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      background: #fff;
+      color: #000;
+      margin-bottom: 8px;
+      height: 65px;
+      border-radius: 2px;
+
+      .detail {
+        padding-left: 8px;
+
+        .day-of-week {
           font-weight: bold;
+          width: fit-content;
         }
-    
-        .card {
+
+        .event {
+          font-size: 12px;
+          font-variant-numeric: tabular-nums;
           display: flex;
           align-items: center;
-          padding: 8px;
-          background: #fff;
-          color: #000;
-          margin-bottom: 8px;
-          height: 65px;
-          border-radius: 2px;
-    
-          .detail {
-            padding-left: 8px;
-    
-            .day-of-week {
-              font-weight: bold;
-              width: fit-content;
-            }
-    
-            .event {
-              font-size: 12px;
-              font-variant-numeric: tabular-nums;
-              display: flex;
-              align-items: center;
-    
-              .time {
-                font-weight: bold;
-                text-transform: none;
-                margin-right: 3px;
-              }
-    
-              .name {}
-            }
+
+          .time {
+            font-weight: bold;
+            text-transform: none;
+            margin-right: 3px;
+          }
+
+          .name {
           }
         }
       }
-  }
-  
-  @media screen and (max-width: 1079px){
-    .info {
-      .description {
-        width: 100%;
-      }
     }
   }
+}
+
+@media screen and (max-width: 1079px) {
+  .info {
+    .description {
+      width: 100%;
+    }
+  }
+}

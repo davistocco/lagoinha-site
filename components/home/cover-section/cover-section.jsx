@@ -1,4 +1,3 @@
-import { faPlaceOfWorship } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image'
 import React from 'react'
 import Subtitle from '../../subtitle/subtitle.jsx';
