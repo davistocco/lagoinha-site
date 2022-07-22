@@ -1,8 +1,8 @@
 .section {
-    
-    .maps {
+    .location {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         max-width: 90%;
         width: 1200px;
         padding: 45px 0;
@@ -10,13 +10,45 @@
 
         .address {
             margin-right: 45px;
-      
+
             p {
-              white-space: nowrap;
-              text-align: left;
-              font-size: 24px;
+                white-space: nowrap;
+                text-align: left;
+                font-size: 24px;
             }
-          }
+        }
+
+        .maps {
+            width: 60%;
+
+            .iframe-container {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
-    
+}
+
+@media screen and (max-width: 1079px) {
+    .section {
+        .location {
+            flex-wrap: wrap;
+
+            .maps {
+                width: 100%;
+            }
+        }
+    }
 }

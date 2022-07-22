@@ -43,8 +43,19 @@ li {
   position: relative;
   margin-top: 100px;
   height: 100vh;
+
+  @media screen and (max-width: 1079px){
+    & {
+        margin-top: 0;
+    }
 }
+}
+
 
 .font-lg {
   font-size: 24px;
+}
+
+p {
+  margin-top: 0;
 }

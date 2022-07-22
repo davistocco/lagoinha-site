@@ -22,20 +22,20 @@ import Textarea from '../components/textarea/textarea.jsx';
 
 export default function Home(props) {
   const photos = props.photos;
- 
+
   return (
     <main className={styles.container}>
       <ToastContainer />
-     
+
       <CoverSection />
 
-      <BriefSection/>
+      <BriefSection />
 
-      <PraySection photos={photos}/>
+      <PraySection photos={photos} />
 
       <Contribute></Contribute>
 
-     <LocationSection/>
+      <LocationSection />
 
       <AppSection></AppSection>
 

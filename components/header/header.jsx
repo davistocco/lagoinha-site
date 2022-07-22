@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss';
 import Link from 'next/link'
 import { faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/router';
 
 export default function Header() {
     const [show, setShow] = useState(false);
@@ -21,6 +22,12 @@ export default function Header() {
             prevScrollpos = currentScrollPos;
         }
     }, []);
+
+    const router = useRouter();
+
+    useEffect(() => {
+        setShow(false);
+    }, [router.asPath]);
 
     const openMobileMenu = () => {
         setShow(!show);

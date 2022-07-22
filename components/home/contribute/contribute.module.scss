@@ -1,5 +1,4 @@
 .section {
-
     .contribute {
         width: 1200px;
         max-width: 90%;
@@ -13,11 +12,12 @@
         align-items: center;
 
         .copy {
+            margin-bottom: 16px;
             font-size: 16px;
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
-            
+
             .icon {
                 margin-right: 8px;
             }

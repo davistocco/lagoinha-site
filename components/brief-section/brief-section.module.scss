@@ -5,6 +5,7 @@
     padding: 45px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     .description {
       width: 50%;
@@ -59,4 +60,12 @@
           }
         }
       }
+  }
+  
+  @media screen and (max-width: 1079px){
+    .info {
+      .description {
+        width: 100%;
+      }
+    }
   }
