@@ -16,6 +16,7 @@ export default function EncontreUmGc(props) {
 
 export async function getServerSideProps() {
     const gcs = await getGcs();
+    // const gcs = []
 
     return {
         props: {

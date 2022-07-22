@@ -9,44 +9,64 @@ import AppSection from '../components/home/app-section/app-section.jsx';
 import Contribute from '../components/home/contribute/contribute.jsx';
 import Button from '../components/button/button.jsx';
 import styles from '../styles/Home.module.scss'
-import { getPhotos } from '../domains/photos.js';
 import axios from 'axios';
-import { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import Input from '../components/input/input.jsx';
+import Form from '../components/form/form.jsx';
+import { getPhotos } from '../domains/photos'
+import Textarea from '../components/textarea/textarea.jsx';
 
 export default function Home(props) {
   const photos = props.photos;
-
   const [loading, setLoading] = useState(false);
+
+  const [prayRequest, setPrayRequest] = useState({
+    values: {
+      name: '',
+      email: '',
+      phone: '',
+      description: '',
+    },
+    rules: {
+      name: {
+        required: 'Nome obrigatório!'
+      },
+      email: {
+        required: 'E-mail obrigatório!'
+      },
+      phone: {
+        required: 'Telefone obrigatório!'
+      },
+    },
+    isValid: undefined,
+    submitted: false
+  })
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    const toastOptions = {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    };
+
+    if (!prayRequest.isValid) {
+      toast.error('Preencha os campos obrigatórios!', toastOptions);
+      return;
+    } 
+    
     setLoading(true);
-    axios.post('/api/pray-request', {
-      name: event.target.name.value,
-      email: event.target.email.value,
-      phone: event.target.phone.value,
-      description: event.target.description.value,
-    }).then(response => {
-      toast.success('Pedido de oração enviado!', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        });
+
+    axios.post('/api/pray-request', prayRequest.values).then(response => {
+      toast.success('Pedido de oração enviado!', toastOptions);
     }).catch(error => {
-      toast.error('Erro ao enviar pedido de oração', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        });
+      toast.error('Erro ao enviar pedido de oração', toastOptions);
     }).finally(() => {
       setLoading(false);
     });
@@ -113,25 +133,19 @@ export default function Home(props) {
               <h2 className={`${styles.subtitle} ${styles.secondary}`}>
                 <FontAwesomeIcon icon={faPrayingHands} className={styles.icon} />
                 Pedido de Oração</h2>
-              <form onSubmit={handleSubmit}>
-                <div className={styles['form-item']}>
-                  <label htmlFor="name">Nome</label>
-                  <input type="text" id='name' name='name' />
-                </div>
-                <div className={styles['form-item']}>
-                  <label htmlFor="email">E-mail</label>
-                  <input type="text" id='email' name='email' />
-                </div>
-                <div className={styles['form-item']}>
-                  <label htmlFor="phone">Telefone</label>
-                  <input type="text" id='phone' name='phone' />
-                </div>
-                <div className={styles['form-item']}>
-                  <label htmlFor="description">Descrição do pedido</label>
-                  <textarea name="description" id="description" rows="5" ></textarea>
-                </div>
+              <Form form={prayRequest} setForm={setPrayRequest} onSubmit={handleSubmit}>
+                <Input type='text' name='name' label='Nome' maxLength='30'
+                  rules={{ required: 'Nome obrigatório!' }}
+                  hasError={prayRequest.rules.name.hasError}></Input>
+                <Input type='text' name='email' label='E-mail' maxLength='255'
+                  rules={{ required: 'E-mail obrigatório!' }}
+                  hasError={prayRequest.rules.email.hasError}></Input>
+                <Input type='text' name='phone' label='Telefone' maxLength='11'
+                  rules={{ required: 'Telefone obrigatório!' }}
+                  hasError={prayRequest.rules.phone.hasError}></Input>
+                <Textarea name="description" rows="5" label='Descrição do pedido' maxLength='300'></Textarea>
                 <Button loading={loading}>Enviar</Button>
-              </form>
+              </Form>
             </div>
             <Carousel showArrows={true} showStatus={false} autoPlay={true}
               interval={4000} className={styles.carousel} showThumbs={false}
@@ -171,6 +185,8 @@ export default function Home(props) {
 
 export async function getServerSideProps() {
   const photos = await getPhotos();
+
+  // const photos = []
 
   return {
     props: {
