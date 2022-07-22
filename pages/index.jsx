@@ -1,4 +1,4 @@
-import { faClock, faLocationDot, faPlaceOfWorship, faPrayingHands, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faClock, faLocationDot, faPlaceOfWorship, faPrayingHands, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image'
 import { Carousel } from 'react-responsive-carousel'
@@ -59,8 +59,8 @@ export default function Home(props) {
     if (!prayRequest.isValid) {
       toast.error('Preencha os campos obrigatórios!', toastOptions);
       return;
-    } 
-    
+    }
+
     setLoading(true);
 
     axios.post('/api/pray-request', prayRequest.values).then(response => {
@@ -147,17 +147,20 @@ export default function Home(props) {
                 <Button loading={loading}>Enviar</Button>
               </Form>
             </div>
-            <Carousel showArrows={true} showStatus={false} autoPlay={true}
-              interval={4000} className={styles.carousel} showThumbs={false}
-              infiniteLoop={true}>
-              {
-                photos.map((photo, index) =>
-                  <div key={index} className={styles.item}>
-                    <Image src={photo.url} alt="logo" layout='fill' objectFit='contain' />
-                  </div>
-                )
-              }
-            </Carousel>
+            <div className={styles.photos}>
+              <Subtitle icon={faCamera} secondary>Galeria de Fotos</Subtitle>
+              <Carousel showArrows={true} showStatus={false} autoPlay={true}
+                interval={4000} className={styles.carousel} showThumbs={false}
+                infiniteLoop={true}>
+                {
+                  photos.map((photo, index) =>
+                    <div key={index} className={styles.item}>
+                      <Image src={photo.url} alt="logo" layout='fill' objectFit='contain' />
+                    </div>
+                  )
+                }
+              </Carousel>
+            </div>
           </div>
         </div>
       </section>

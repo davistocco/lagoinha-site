@@ -36,12 +36,14 @@
     .contribution {
       display: flex;
       justify-content: space-between;
-      align-items: center;
 
-      .carousel {
+      .photos {
         width: 60%;
-        border-radius: 2px;
-        background-color: #000;
+        .carousel {
+          width: 100%;
+          border-radius: 2px;
+          background-color: #000;
+        }
 
         .item {
           position: relative;
