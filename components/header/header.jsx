@@ -1,13 +1,26 @@
 import { faFacebook, faInstagram, faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './header.module.scss';
 import Link from 'next/link'
 
 export default function Header() {
+    useEffect(() => {
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        let currentScrollPos = window.pageYOffset;
+          if (prevScrollpos > currentScrollPos) {
+            document.getElementById("header").style.top = "0";
+          } else {
+            document.getElementById("header").style.top = "-110px";
+          }
+          prevScrollpos = currentScrollPos;
+        }
+    }, []);
+    
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id='header'>
             <header className={styles.header}>
                 <Link href='/'>
                     <Image className={styles.logo} src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />

@@ -30,7 +30,7 @@ export default function Contribute() {
                         title="Copiado!"
                         arrow
                         placement='top'
-                        leaveDelay={200}
+                        leaveDelay={500}
                     >
                         <span className={styles.copy} onClick={handleCopy}><FontAwesomeIcon icon={faCopy} className={styles.icon} />Copiar PIX - 44.542.522/0001-90</span>
                     </Tooltip>

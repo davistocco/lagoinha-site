@@ -1,0 +1,22 @@
+.section {
+    
+    .maps {
+        display: flex;
+        align-items: center;
+        max-width: 90%;
+        width: 1200px;
+        padding: 45px 0;
+        margin: auto;
+
+        .address {
+            margin-right: 45px;
+      
+            p {
+              white-space: nowrap;
+              text-align: left;
+              font-size: 24px;
+            }
+          }
+    }
+    
+}

@@ -5,9 +5,12 @@
     z-index: 9999;
     background: #FDD200;
     box-shadow: 2px 2px 8px #424242;
+    transition: top 0.3s;
+    display: block;
 
     .header {
-        max-width: 1200px;
+        width: 1200px;
+        max-width: 90%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
