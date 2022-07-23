@@ -67,7 +67,7 @@ export default function Header() {
                 </header>
             </div>
 
-            <header className={`${styles.mobile}  ${show && styles.show}`}>
+            <header className={`${styles.mobile}  ${show && styles.show}`} style={{ boxShadow: show ? '2px 2px 8px #424242' : 'none' }}>
                 <div className={styles.hamburger} onClick={openMobileMenu}>
                     <FontAwesomeIcon icon={faBars} size='2x' />
                 </div>

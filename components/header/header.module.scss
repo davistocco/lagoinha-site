@@ -6,6 +6,7 @@
     background: #fdd200;
     transition: top 0.3s;
     display: block;
+    box-shadow: 2px 2px 8px #424242;
 
     .header {
         width: 1200px;
@@ -92,6 +93,7 @@
     justify-content: space-between;
     left: -290px;
     transition: left 0.3s;
+    box-shadow: 2px 2px 8px #424242;
 
     .logo {
         cursor: pointer;
@@ -106,6 +108,21 @@
         background: #fdd200;
         padding: 10px;
         border-radius: 0 8px 8px 0;
+        box-shadow: 2px 2px 8px #424242;
+        z-index: 10;
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            display: block;
+            background: #fdd200;
+            top: 0;
+            left: -10px;
+            z-index: -1;
+            border-radius: 0 8px 8px 0;
+        }
     }
 
     .links {

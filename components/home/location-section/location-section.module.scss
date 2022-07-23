@@ -45,6 +45,10 @@
         .location {
             flex-wrap: wrap;
 
+            .address {
+                margin: 0;
+            }
+
             .maps {
                 width: 100%;
             }
