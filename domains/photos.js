@@ -4,7 +4,7 @@ const getPhotos = () => new Promise((resolve, reject) => {
     strapi.get('/photo?populate=img')
         .then(response => {
             const photos = response?.data?.data?.attributes?.img?.data?.map(image => ({
-                url: process.env.NEXT_PUBLIC_STRAPI_URL + image.attributes.formats.medium.url
+                url: image.attributes.url
             })) ?? [];
 
             resolve(photos);

@@ -46,8 +46,6 @@ export default function Home(props) {
 export async function getServerSideProps() {
   const photos = await getPhotos();
 
-  // const photos = []
-
   return {
     props: {
       photos: photos
