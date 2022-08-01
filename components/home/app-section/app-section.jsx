@@ -10,7 +10,7 @@ export default function AppSection() {
         <section id='nosso-app' className={styles.section}>
             <div className={styles.app}>
                 <div className={styles.mobile}>
-                    <Image src="/images/iphone.png" alt="logo" width={400} height={600} objectFit='cover' />
+                    <Image src="/images/iphone.png" alt="iphone" width={400} height={600} objectFit='cover' />
 
                 </div>
                 <div className={styles.description}>
@@ -53,12 +53,12 @@ export default function AppSection() {
                     <div className={styles.badges}>
                         <div>
                             <a href="https://play.google.com/store/apps/details?id=br.org.lagoinharibeirao.appEK1834" target='_blank' rel="noreferrer">
-                                <Image src="/images/google-play-badge.png" alt="logo" layout='fill' objectFit='contain' />
+                                <Image src="/images/google-play-badge.png" alt="google play badge" layout='fill' objectFit='contain' />
                             </a>
                         </div>
                         <div>
                             <a href="https://apps.apple.com/br/app/lagoinha-ribeir%C3%A3o/id1613226290?l=en" target='_blank' rel="noreferrer">
-                                <Image src="/images/app-store-badge.png" alt="logo" layout='fill' objectFit='contain' />
+                                <Image src="/images/app-store-badge.png" alt="app store badge" layout='fill' objectFit='contain' />
                             </a>
                         </div>
                     </div>

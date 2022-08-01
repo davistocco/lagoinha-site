@@ -17,7 +17,7 @@ export default function BriefSection() {
             <div className={styles.agenda}>
                 <Subtitle icon={faClock}>Hoŕario dos Cultos</Subtitle>
                 <div className={styles.card}>
-                    <Image src="/images/passaro-lagoinha-black.png" alt="logo" width='40px' height='40px' objectFit='cover' />
+                    <Image src="/images/passaro-lagoinha-black.png" alt="logo lagoinha" width='40px' height='40px' objectFit='cover' />
                     <div className={styles.detail}>
                         <div className={styles['day-of-week']}>Domingo</div>
                         <div className={styles.event}>
@@ -31,7 +31,7 @@ export default function BriefSection() {
                     </div>
                 </div>
                 <div className={styles.card}>
-                    <Image src="/images/legacy-icon-black.png" alt="logo" width='40px' height='40px' objectFit='cover' />
+                    <Image src="/images/legacy-icon-black.png" alt="logo legacy" width='40px' height='40px' objectFit='cover' />
                     <div className={styles.detail}>
                         <div className={styles['day-of-week']}>Sábado</div>
                         <div className={styles.event}>
@@ -41,7 +41,7 @@ export default function BriefSection() {
                     </div>
                 </div>
                 <div className={styles.card}>
-                    <Image src="/images/passaro-lagoinha-black.png" alt="logo" width='40px' height='40px' objectFit='cover' />
+                    <Image src="/images/passaro-lagoinha-black.png" alt="logo lagoinha" width='40px' height='40px' objectFit='cover' />
                     <div className={styles.detail}>
                         <div className={styles['day-of-week']}>Quinta-Feira</div>
                         <div className={styles.event}>

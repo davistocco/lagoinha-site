@@ -93,7 +93,7 @@ export default function PraySection({ photos }) {
                             {
                                 photos.map((photo, index) =>
                                     <div key={index} className={styles.item}>
-                                        <Image src={photo.url} alt="logo" className={styles.img} layout='fill' objectFit='contain' />
+                                        <Image src={photo.url} alt={`imagem do carrosel (${index})`} className={styles.img} layout='fill' objectFit='contain' />
                                     </div>
                                 )
                             }

@@ -38,7 +38,7 @@ export default function Header() {
             <div className={styles.wrapper} id='header'>
                 <header className={styles.header}>
                     <Link href='/'>
-                        <Image className={styles.logo} src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
+                        <Image className={styles.logo} src="/images/Graf_Horiz_Black.png" alt="logo lagoinha" width='200px' height='100px' objectFit='contain' />
                     </Link>
                     <ul className={styles.links}>
                         <li><Link href="/#">Início</Link></li>

@@ -9,12 +9,12 @@ export default function CoverSection() {
         <section id='inicio' className={styles.section}>
             <div className={styles.logo}>
                 <Link href='/'>
-                    <Image className={styles.logo} src="/images/lagoinha-white.png" alt="logo" width='200px' height='100px' objectFit='contain' />
+                    <Image className={styles.logo} src="/images/lagoinha-white.png" alt="logo lagoinha" width='200px' height='100px' objectFit='contain' />
                 </Link>
             </div>
             <div className={styles.cover}>
                 <Subtitle>Nossa Igreja</Subtitle>
-                <Image src="/images/Artboard 2.png" alt="logo" width='1200' height='480' objectFit='contain' />
+                <Image src="/images/Artboard 2.png" alt="foto do templo" width='1200' height='480' objectFit='contain' />
             </div>
         </section>
     )

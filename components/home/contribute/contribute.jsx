@@ -36,7 +36,7 @@ export default function Contribute() {
                     </Tooltip>
 
                 </div>
-                <Image src="/images/contribute.png" alt="logo" width='1200' height='470' objectFit='contain' />
+                <Image src="/images/contribute.png" alt="contribuicao - pix 44.542.522/0001-90" width='1200' height='470' objectFit='contain' />
             </div>
         </section>
     )
