@@ -2,6 +2,10 @@
     background-color: #000000;
     padding-top: 145px;
 
+    .logo {
+        display: none;
+    }
+
     .cover {
         width: 1200px;
         max-width: 90%;
@@ -10,7 +14,12 @@
 
     @media screen and (max-width: 1079px) {
         & {
-            padding-top: 95px;
+            padding-top: 0px;
+        }
+
+        .logo {
+            display: block;
+            text-align: center;
         }
     }
 }

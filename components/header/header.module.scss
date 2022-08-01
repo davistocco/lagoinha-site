@@ -15,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         .logo {
             cursor: pointer;
         }
@@ -86,12 +87,11 @@
     background: #fdd200;
     z-index: 9999;
     top: 0;
-    padding: 0 45px 45px 45px;
+    padding: 45px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    left: -290px;
+    justify-content: center;
+    left: -284px;
     transition: left 0.3s;
     box-shadow: 2px 2px 8px #424242;
 
@@ -104,7 +104,7 @@
         color: #000;
         cursor: pointer;
         top: 22px;
-        right: -46px;
+        right: -48px;
         background: #fdd200;
         padding: 10px;
         border-radius: 0 8px 8px 0;
@@ -128,7 +128,7 @@
     .links {
         color: #000;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 16px;
 
         li {
             margin-bottom: 10px;

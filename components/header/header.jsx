@@ -4,7 +4,7 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import styles from './header.module.scss';
 import Link from 'next/link'
-import { faBars, faHamburger } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
 
 export default function Header() {
@@ -69,11 +69,8 @@ export default function Header() {
 
             <header className={`${styles.mobile}  ${show && styles.show}`} style={{ boxShadow: show ? '2px 2px 8px #424242' : 'none' }}>
                 <div className={styles.hamburger} onClick={openMobileMenu}>
-                    <FontAwesomeIcon icon={faBars} size='2x' />
+                    <FontAwesomeIcon icon={faArrowRightArrowLeft} size='2x' />
                 </div>
-                <Link href='/'>
-                    <Image className={styles.logo} src="/images/Graf_Horiz_Black.png" alt="logo" width='200px' height='100px' objectFit='contain' />
-                </Link>
                 <ul className={styles.links}>
                     <li><Link href="/#">Início</Link></li>
                     <li><Link href="/#pedido-de-oracao">Pedido de oração</Link></li>
