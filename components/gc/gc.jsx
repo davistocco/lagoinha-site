@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './gc.module.scss';
 import Subtitle from '../subtitle/subtitle';
-import { faHouseChimney, faPersonCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faHouseChimney, faMapLocationDot, faPersonCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Gc(props) {
     const gcs = props.gcs.data;
@@ -32,7 +33,12 @@ export default function Gc(props) {
                                 gcs.map(gc =>
                                     <tr key={gc.id}>
                                         <td>{gc.attributes.name}</td>
-                                        <td>{gc.attributes.street}, {gc.attributes.number}</td>
+                                        <td>
+                                            <FontAwesomeIcon icon={faMapLocationDot} className={styles.icon} />
+                                            <a className={styles['maps-link']} target='__blank' href={gc.attributes.google_maps_link}>
+                                                {`${gc.attributes.street}, ${gc.attributes.number}`}
+                                            </a>
+                                        </td>
                                         <td>{gc.attributes.district}</td>
                                         <td>{gc.attributes.day_of_week} às {gc.attributes.starts_at}</td>
                                         <td>{gc.attributes.leadership}</td>

@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     <div className='layout'>
       <Head>
         <title>Igreja Batista da Lagoinha em Ribeirão Preto</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
       </Head>
       <Header></Header>
