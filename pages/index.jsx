@@ -33,7 +33,7 @@ export default function Home(props) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const photos = await getPhotos();
 
   return {
