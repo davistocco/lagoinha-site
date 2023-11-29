@@ -45,7 +45,6 @@ export default function Header() {
                         <li><Link href="/#pedido-de-oracao">Pedido de oração</Link></li>
                         <li><Link href="/#nossa-localizacao">Nossa localização</Link></li>
                         <li><Link href="/#nosso-app">Nosso APP</Link></li>
-                        {/* <li><Link href='/encontre-um-gc'>Encontre um GC</Link></li> */}
                     </ul>
                     <div className={styles.extra}>
                         <div className={styles.contact}>
@@ -76,7 +75,6 @@ export default function Header() {
                     <li><Link href="/#pedido-de-oracao">Pedido de oração</Link></li>
                     <li><Link href="/#nossa-localizacao">Nossa localização</Link></li>
                     <li><Link href="/#nosso-app">Nosso APP</Link></li>
-                    <li><Link href='/encontre-um-gc'>Encontre um GC</Link></li>
                 </ul>
                 <div className={styles.extra}>
                     <div className={styles.contact}>
