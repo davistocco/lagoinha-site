@@ -15,7 +15,7 @@ export default function BriefSection() {
                     São mais de 600 Lagoinhas que atuam com uma única visão: alcançar a população para Cristo.</p>
             </div>
             <div className={styles.agenda}>
-                <Subtitle icon={faClock}>Hoŕario dos Cultos</Subtitle>
+                <Subtitle icon={faClock}>Horário dos Cultos</Subtitle>
                 <div className={styles.card}>
                     <Image src="/images/passaro-lagoinha-black.png" alt="logo lagoinha" width='40px' height='40px' objectFit='cover' />
                     <div className={styles.detail}>
@@ -27,6 +27,16 @@ export default function BriefSection() {
                         <div className={styles.event}>
                             <div className={styles.time}>19h00</div>
                             <div className={styles.name}>Culto de Celebração</div>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.card}>
+                    <Image src="/images/rocket.png" alt="logo rocket" width='40px' height='40px' objectFit='cover' />
+                    <div className={styles.detail}>
+                        <div className={styles['day-of-week']}>Sábado</div>
+                        <div className={styles.event}>
+                            <div className={styles.time}>16h00</div>
+                            <div className={styles.name}>Culto Rocket</div>
                         </div>
                     </div>
                 </div>
