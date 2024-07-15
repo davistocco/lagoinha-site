@@ -9,7 +9,7 @@ export default function BriefSection() {
     return (
         <section className={styles.info}>
             <div className={styles.description}>
-                <Subtitle icon={faPlaceOfWorship}>Um lugar de novos começos</Subtitle>
+                <Subtitle icon={faPlaceOfWorship}>Bem vindo ao novo</Subtitle>
                 <p>A Igreja Batista da Lagoinha nasceu em Belo Horizonte - MG e há mais de 6 décadas atua de forma relevante na expansão do evangelho. Atualmente, como Lagoinha Global, inúmeras igrejas crescem em diferentes lugares do Brasil e mundo afora.
                     Em Ribeirão Preto - SP, a Igreja Batista da Lagoinha nasceu há 4 anos e deseja que cada pessoa tenha um relacionamento público com Jesus.
                     São mais de 600 Lagoinhas que atuam com uma única visão: alcançar a população para Cristo.</p>
