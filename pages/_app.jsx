@@ -10,7 +10,11 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Igreja Batista da Lagoinha em Ribeirão Preto</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        <script 
+          async 
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID}`}
+          crossorigin="anonymous">
+        </script>
       </Head>
       <Header></Header>
       <Component {...pageProps} />
